@@ -1,0 +1,23 @@
+/*============= Tablet styles: ======================*/
+@media all and (min-width: 603px) and (max-width: 862px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*============= Desktop styles: ======================*/
+@media all and (min-width: 863px) and (max-width: 1210px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*============= Desktop-Large styles: ======================*/
+@media all and (min-width: 1211px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

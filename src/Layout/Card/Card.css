@@ -1,0 +1,118 @@
+.card {
+  margin: 20px 10px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.21);
+  box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.21);
+  border-radius: 15px 15px 0 0;
+}
+
+.card .image-container {
+  margin: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+  font-size: 170%;
+  padding: 31px 16px;
+  font-family: 'PT Serif', serif;
+}
+
+.card p {
+  padding: 8px 16px 31px 16px;
+  margin: 0;
+  line-height: 150%;
+}
+
+.card .button-container {
+  margin: 0 16px;
+}
+
+.card .button-container button {
+  width: 100%;
+}
+
+/*============= Mobile styles: ======================*/
+@media all and (max-width: 458px) {
+  .card {
+    width: 424px;
+  }
+
+  .card .image-container {
+    height: 316px;
+  }
+}
+
+/*============= Mobile-large styles: ======================*/
+@media all and (min-width: 459px) and (max-width: 602px) {
+  .card {
+    width: 560px;
+    border-radius: 25px 0 0 0;
+    display: flex;
+  }
+  .card .image-container {
+    width: 200px;
+    height: auto;
+  }
+  .card .contents-container {
+    width: 360px;
+  }
+}
+
+/*============= Tablet styles: ======================*/
+@media all and (min-width: 603px) and (max-width: 862px) {
+  .card {
+    width: 402px;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  .card .image-container {
+    height: 298px;
+  }
+
+  .card .button-container {
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+  }
+}
+
+/*============= Desktop styles: ======================*/
+@media all and (min-width: 863px) and (max-width: 1210px) {
+  .card {
+    width: 376px;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  .card .image-container {
+    height: 280px;
+  }
+
+  .card .button-container {
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+  }
+}
+
+/*============= Desktop-Large styles: ======================*/
+@media all and (min-width: 1211px) {
+  .card {
+    width: 305px;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  .card .image-container {
+    height: 224px;
+  }
+
+  .card .button-container {
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+  }
+}

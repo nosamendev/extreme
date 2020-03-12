@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0",
+    "image": "image0.png",
+    "title": "Suspendisse vitae",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies et magna id scelerisque. Aliquam erat volutpat."
+  },
+  {
+    "id": "1",
+    "image": "image1.png",
+    "title": "Duis pretium",
+    "text": "Mauris vitae nulla nec orci tristique gravida. In hac habitasse platea dictumst."
+  },
+  {
+    "id": "2",
+    "image": "image2.png",
+    "title": "Ut malesuada",
+    "text": "Donec imperdiet tincidunt tellus."
+  },
+  {
+    "id": "3",
+    "image": "image3.png",
+    "title": "Scelerisque",
+    "text": "Duis tempor dui ligula, sit amet pulvinar elit eleifend eu. Praesent rhoncus pellentesque sagittis. Vivamus eget nisl mattis, scelerisque mi sed, scelerisque lacus."
+  },
+  {
+    "id": "4",
+    "image": "image4.png",
+    "title": "Pharetra",
+    "text": "Curabitur sodales, neque at consequat consequat, ex nisl."
+  }
+]
