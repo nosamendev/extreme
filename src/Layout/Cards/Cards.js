@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { fetchCards } from '../../store/actions';
 import Card from '../Card/Card';
@@ -11,6 +11,28 @@ const Cards = props => {
     props.fetchCards();
   }, []);
 
+  const [openCardsNumber, setOpenCardsNumber] = useState(5);
+
+  const addCardRef = useCallback(node => {
+    if (node) {
+      if (openCardsNumber === 5) {
+        node.classList.add('disabled');
+      } else {
+        node.classList.remove('disabled');
+      }
+    }
+  });
+
+  const removeCardRef = useCallback(node => {
+    if (node) {
+      if (openCardsNumber === 1) {
+        node.classList.add('disabled');
+      } else {
+        node.classList.remove('disabled');
+      }
+    }
+  });
+
   const displayCards = () => {
     if (props.error) {
       return <p>{props.errorDescription}</p>;
@@ -18,7 +40,7 @@ const Cards = props => {
 
     if (props.cards.length !== 0) {
       const cards = [];
-      for (let i = 0; i < props.cards.length; i++) {
+      for (let i = 0; i < openCardsNumber; i++) {
         cards[i] = (
           <Card
             key={props.cards[i].id}
@@ -33,12 +55,32 @@ const Cards = props => {
     }
   };
 
+  const addCard = () => {
+    if (openCardsNumber < 5) {
+      setOpenCardsNumber(openCardsNumber + 1);
+    }
+  };
+
+  const removeCard = () => {
+    if (openCardsNumber > 1) {
+      setOpenCardsNumber(openCardsNumber - 1);
+    }
+  };
+
   if (props.loading) {
     return <Loader />;
   }
   return (
     <React.Fragment>
       <section className="cards">{displayCards()}</section>
+      <div className="actions-container">
+        <span onClick={addCard} ref={addCardRef}>
+          Add Card
+        </span>
+        <span onClick={removeCard} ref={removeCardRef}>
+          Remove Card
+        </span>
+      </div>
     </React.Fragment>
   );
 };

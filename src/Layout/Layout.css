@@ -77,3 +77,30 @@ button {
 button:hover {
   background-color: #0a008e;
 }
+
+.actions-container {
+  margin: 20px;
+  border-top: 2px dotted #ccc;
+  padding: 40px 0;
+}
+
+.actions-container span {
+  border: 2px solid #0a008e;
+  border-radius: 25px;
+  color: #0a008e;
+  padding: 6px 10px;
+  font-size: 130%;
+  text-align: center;
+  margin: 16px 20px 16px 0;
+  cursor: pointer;
+}
+
+.actions-container span:hover {
+  color: #1700ff;
+}
+
+.actions-container span.disabled {
+  color: #bbb;
+  border-color: #bbb;
+  cursor: default;
+}
