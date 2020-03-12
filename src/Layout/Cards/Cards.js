@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchCards } from '../../store/actions';
 import Card from '../Card/Card';
 import Loader from '../Loader/Loader';
+import PropTypes from 'prop-types';
 import './Cards.css';
 
 const Cards = props => {
@@ -49,6 +50,14 @@ const mapStateToProps = state => {
     error: state.fetchCardsReducer.error,
     loading: state.fetchCardsReducer.loading
   };
+};
+
+Cards.propTypes = {
+  cards: PropTypes.array.isRequired,
+  fetchCards: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
+  errorDescription: PropTypes.string,
+  loading: PropTypes.bool.isRequired
 };
 
 export default connect(mapStateToProps, { fetchCards })(Cards);

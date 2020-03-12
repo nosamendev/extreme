@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = props => {
@@ -21,6 +22,12 @@ const Card = props => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default Card;
